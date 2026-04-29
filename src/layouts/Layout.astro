@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = "Lisbon AI 2026: Speakers",
+    description = "Everything you need to know as a speaker at Lisbon AI 2026 — schedule, format, tech, travel, and how to make your talk land.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            type="image/png"
+            href={`${import.meta.env.BASE_URL}favicon.png`}
+        />
+        <link
+            rel="icon"
+            href={`${import.meta.env.BASE_URL}favicon.ico`}
+            sizes="any"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Oswald:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-slate-100 text-ink font-sans antialiased">
+        <slot />
+    </body>
+</html>
