@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import PastSpeakers from "../components/PastSpeakers.astro";
 
 const eventDetails = [
     { label: "Dates", value: "September 23 – 24, 2026" },
@@ -70,7 +71,7 @@ const faq = [
         a: "Yes — every talk is live-streamed and published on YouTube within ~2 weeks. Slides are published if you allow it.",
     },
     {
-        q: "Travel and accommodation?",
+        q: "Will you cover my expenses?",
         a: "We cover travel and stay at the partner hotel for invited speakers. If you have particular requirements, work with us and we'll do our best to accommodate you.",
     },
     {
@@ -78,7 +79,7 @@ const faq = [
         a: "We haven't done that before, but we're into the idea if you are. Let us know early so we can wire them into the schedule and comms.",
     },
     {
-        q: "Code of conduct?",
+        q: "Is there a code of conduct?",
         a: "Every speaker, attendee, and volunteer agrees to our code of conduct. It's short and (we hope) sane, but non-negotiable.",
     },
 ];
@@ -90,17 +91,13 @@ const faq = [
     <!-- Hero -->
     <section class="relative">
         <div
-            class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-8 pb-20 pt-16 md:pt-28"
+            class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-8 pb-28 pt-16 md:pt-20"
         >
             <div class="small-headline mb-4">/lisbon-ai-2026 · speakers</div>
             <h1 class="big-headline">
                 WELCOME LISBONAI 2026<br />
                 SPEAKERS <span class="text-accent">{"❤️"}</span>
             </h1>
-            <div class="mt-8 mb-6 max-w-xl text-xl text-muted">
-                Lisbon AI is a community-run, builder-first conference. <br />
-                Our program is quite literally all about you.
-            </div>
         </div>
     </section>
 
@@ -131,8 +128,19 @@ const faq = [
         </div>
     </section>
 
+    <!-- Past speakers -->
+    <PastSpeakers />
+
+    <!-- 2026 act break -->
+    <section class="border-t border-ink/10">
+        <div class="mx-auto max-w-6xl px-6 py-24 md:py-32 md:pb-12">
+            <div class="small-headline mb-6">/2026-edition</div>
+            <h2 class="big-headline">EVERYTHING ABOUT 2026</h2>
+        </div>
+    </section>
+
     <!-- Essentials -->
-    <section id="essentials" class="border-t border-ink/10">
+    <section id="essentials" class="">
         <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
             <div class="md:col-span-4">
                 <div class="small-headline">/essentials</div>
@@ -242,24 +250,18 @@ const faq = [
         <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
             <div class="md:col-span-4">
                 <div class="small-headline">/faq</div>
-                <p class="mt-3 text-muted">
-                    The things speakers actually ask us.
-                </p>
             </div>
             <div class="md:col-span-8">
                 {
                     faq.map((item) => (
-                        <details class="group border-b border-ink/10 py-5">
+                        <div class="group border-b border-ink/10 py-5">
                             <summary class="flex cursor-pointer items-baseline justify-between gap-6 text-lg md:text-xl">
                                 <span>{item.q}</span>
-                                <span class="font-mono text-faint transition-transform group-open:rotate-45">
-                                    +
-                                </span>
                             </summary>
                             <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
                                 {item.a}
                             </p>
-                        </details>
+                        </div>
                     ))
                 }
             </div>
