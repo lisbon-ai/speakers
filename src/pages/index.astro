@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PastSpeakers from "../components/PastSpeakers.astro";
+import LatentField from "../components/LatentField.astro";
 
 const eventDetails = [
     { label: "Dates", value: "September 23 – 24, 2026" },
     { label: "Venue", value: "Centro Champalimaud, Belém · Lisbon" },
-    { label: "Attendees", value: "~400 builders, in person" },
+    { label: "Attendees", value: "~400 attendees in person" },
     { label: "Speakers", value: "Aiming for around 20" },
     {
         label: "Format",
@@ -89,11 +90,16 @@ const faq = [
     <Header />
 
     <!-- Hero -->
-    <section class="relative">
+    <section class="relative overflow-hidden">
+        <LatentField class="absolute inset-0 h-full w-full" />
         <div
-            class="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-8 pb-28 pt-16 md:pt-20"
+            class="relative z-10 mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-8 pb-28 pt-16 md:pt-20"
         >
-            <div class="small-headline mb-4">/lisbon-ai-2026 · speakers</div>
+            <div class="small-headline mb-4">
+                <span class="bg-slate-100 rounded-lg px-2 py-1">
+                    /lisbon-ai-2026 · speakers
+                </span>
+            </div>
             <h1 class="big-headline">
                 WELCOME LISBONAI 2026<br />
                 SPEAKERS <span class="text-accent">{"❤️"}</span>
@@ -113,8 +119,8 @@ const faq = [
                 <p>
                     We know saying yes to a conference talk costs real time and
                     real travel, and we don't take that lightly. Thank you for
-                    trusting us with that. We'll do our best to make sure you
-                    have a great experience.
+                    trusting. We'll do our best to make sure you have a great
+                    experience.
                 </p>
                 <p>
                     If any of the information below is unclear, ambiguous, or
@@ -133,7 +139,7 @@ const faq = [
 
     <!-- 2026 act break -->
     <section class="border-t border-ink/10">
-        <div class="mx-auto max-w-6xl px-6 py-24 md:py-32 md:pb-12">
+        <div class="mx-auto max-w-6xl px-6 py-24 pb-0 md:py-32 md:pb-12">
             <div class="small-headline mb-6">/2026-edition</div>
             <h2 class="big-headline">EVERYTHING ABOUT 2026</h2>
         </div>
@@ -290,7 +296,7 @@ const faq = [
                         href="https://discord.com/invite/ExnMf8wTPU"
                         class="rounded-full border border-ink px-6 py-3 hover:border-accent hover:text-accent transition-colors"
                     >
-                        Discord
+                        Our discord
                     </a>
                 </div>
                 <p class="mt-6 font-mono text-xs uppercase text-faint">
