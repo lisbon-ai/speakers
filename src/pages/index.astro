@@ -6,318 +6,307 @@ import PastSpeakers from "../components/PastSpeakers.astro";
 import LatentField from "../components/LatentField.astro";
 
 const eventDetails = [
-    { label: "Dates", value: "September 23 – 24, 2026" },
-    { label: "Venue", value: "Centro Champalimaud, Belém · Lisbon" },
-    { label: "Attendees", value: "~400 attendees in person" },
-    { label: "Speakers", value: "Aiming for around 20" },
-    {
-        label: "Format",
-        value: "Single track + demos + a couple of workshops",
-    },
-    { label: "Recording", value: "Live-streamed on Youtube and X" },
+  { label: "Dates", value: "September 23 – 24, 2026" },
+  { label: "Venue", value: "Centro Champalimaud, Belém · Lisbon" },
+  { label: "Attendees", value: "~400 attendees in person" },
+  { label: "Speakers", value: "Aiming for around 20" },
+  {
+    label: "Format",
+    value: "Single track + demos + a couple of workshops",
+  },
+  { label: "Recording", value: "Live-streamed on Youtube and X" },
 ];
 
 const talkFormats = [
-    {
-        kind: "Talk slots",
-        length: "20 min + 5 min Q&A",
-        note: "Standard slot. Pick one idea, show the code, leave room to breathe.",
-    },
-    {
-        kind: "Demos",
-        length: "7 min, no Q&A",
-        note: "Fast and punchy. Great for a single demo or a sharp opinion.",
-    },
-    {
-        kind: "Workshops",
-        length: "60 – 90 min",
-        note: "Hands-on, smaller room. We'll share laptop / setup expectations ahead of time.",
-    },
+  {
+    kind: "Talk slots",
+    length: "20 min + 5 min Q&A",
+    note: "Standard slot. Pick one idea, show the code, leave room to breathe.",
+  },
+  {
+    kind: "Demos",
+    length: "7 min, no Q&A",
+    note: "Fast and punchy. Great for a single demo or a sharp opinion.",
+  },
+  {
+    kind: "Workshops",
+    length: "60 – 90 min",
+    note: "Hands-on, smaller room. We'll share laptop / setup expectations ahead of time.",
+  },
 ];
 
 const checklist = [
-    {
-        when: "Before August",
-        what: "Confirm your title, abstract, and short bio. We'll publish these on the main conference website.",
-    },
-    {
-        when: "Before August",
-        what: "Send a headshot (square, 1000×1000 minimum) and your social handles.",
-    },
-    {
-        when: "Before September",
-        what: "Share a draft outline of your talk with us. We'll do a 30-min review call if you'd like one.",
-    },
-    {
-        when: "3 days before",
-        what: "Get us your slides, if possible so that we can work out logistics.",
-    },
-    {
-        when: "Day-of",
-        what: "We'll do a tech/sound check with your to make sure you look your best, and then the show is yours.",
-    },
+  {
+    when: "By July 10th",
+    what: "Confirm your title, abstract, and short bio. We'll publish these on the main conference website.",
+  },
+  {
+    when: "By July 10th",
+    what: "Send a headshot (square, 1000×1000 minimum) and your social handles.",
+  },
+  {
+    when: "Before September",
+    what: "Share a draft outline of your talk with us. We'll do a 30-min review call if you'd like one.",
+  },
+  {
+    when: "3 days before",
+    what: "Get us your slides, if possible so that we can work out logistics.",
+  },
+  {
+    when: "Day-of",
+    what: "We'll do a tech/sound check with your to make sure you look your best, and then the show is yours.",
+  },
 ];
 
 const faq = [
-    {
-        q: "Do I need to write an academic-style abstract?",
-        a: "No. Two or three plain-English paragraphs. If your friends would read it, it's the right length.",
-    },
-    {
-        q: "Can I show a product demo?",
-        a: "Yes, as long as it's an honest one. Live demos > polished videos. We'll help you de-risk the wifi.",
-    },
-    {
-        q: "Are talks recorded?",
-        a: "Yes. Every talk is live-streamed and published on YouTube within ~2 weeks. Slides are published if you allow it.",
-    },
-    {
-        q: "Can you cover my expenses?",
-        a: "If needed, we can cover travel and stay for invited speakers. Work with us and we'll do our best to accommodate any particular requirements.",
-    },
-    {
-        q: "Can I bring a co-speaker?",
-        a: "We haven't done that before, but we're into the idea if you are. Let us know early so we can wire them into the schedule and comms.",
-    },
-    {
-        q: "Is there a code of conduct?",
-        a: "Every speaker, attendee, and volunteer agrees to our code of conduct. It's short and (we hope) sane, but non-negotiable.",
-    },
+  {
+    q: "Do I need to write an academic-style abstract?",
+    a: "No. Two or three plain-English paragraphs. If your friends would read it, it's the right length.",
+  },
+  {
+    q: "Can I show a product demo?",
+    a: "Yes, as long as it's an honest one. Live demos > polished videos. We'll help you de-risk the wifi.",
+  },
+  {
+    q: "Are talks recorded?",
+    a: "Yes. Every talk is live-streamed and published on YouTube within ~2 weeks. Slides are published if you allow it.",
+  },
+  {
+    q: "Can you cover my expenses?",
+    a: "If needed, we can cover travel and stay for invited speakers. Work with us and we'll do our best to accommodate any particular requirements.",
+  },
+  {
+    q: "Can I bring a co-speaker?",
+    a: "We haven't done that before, but we're into the idea if you are. Let us know early so we can wire them into the schedule and comms.",
+  },
+  {
+    q: "Is there a code of conduct?",
+    a: "Every speaker, attendee, and volunteer agrees to our code of conduct. It's short and (we hope) sane, but non-negotiable.",
+  },
 ];
 ---
 
 <Layout>
-    <Header />
+  <Header />
 
-    <!-- Hero -->
-    <section class="relative overflow-hidden">
-        <LatentField class="absolute inset-0 h-full w-full" />
-        <div
-            class="relative z-10 mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-8 pb-28 pt-16 md:pt-20"
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <LatentField class="absolute inset-0 h-full w-full" />
+    <div
+      class="relative z-10 mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-8 pb-28 pt-16 md:pt-20"
+    >
+      <div class="small-headline mb-4">
+        <span class="bg-slate-100 rounded-lg px-2 py-1">
+          /lisbon-ai-2026 · speakers
+        </span>
+      </div>
+      <h1 class="big-headline">
+        WELCOME LISBONAI 2026<br />
+        SPEAKERS <span class="text-accent">{"❤️"}</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Thank you -->
+  <section class="border-t border-ink/10">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="small-headline">/thank-you</div>
+      </div>
+      <div class="space-y-6 text-xl leading-relaxed md:col-span-8 md:text-2xl">
+        <p>
+          We know saying yes to a conference talk costs real time and real
+          travel, and we don't take that lightly. Thank you for trusting. We'll
+          do our best to make sure you have a great experience.
+        </p>
+        <p>
+          If any of the information below is unclear, ambiguous, or feels off,
+          email <a
+            class="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+            href="mailto:speakers@lisbonai.org">speakers@lisbonai.org</a
+          > and we'll fix it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past speakers -->
+  <PastSpeakers />
+
+  <!-- 2026 act break -->
+  <section class="border-t border-ink/10">
+    <div class="mx-auto max-w-6xl px-6 py-24 pb-0 md:py-32 md:pb-12">
+      <div class="small-headline mb-6">/2026-edition</div>
+      <h2 class="big-headline">EVERYTHING ABOUT 2026</h2>
+    </div>
+  </section>
+
+  <!-- Essentials -->
+  <section id="essentials" class="">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="small-headline">/essentials</div>
+      </div>
+      <dl class="md:col-span-8">
+        {
+          eventDetails.map((d) => (
+            <div class="flex items-baseline justify-between border-b border-ink/10 py-5">
+              <dt class="font-mono text-xs uppercase text-muted">{d.label}</dt>
+              <dd class="text-right text-xl md:text-2xl">{d.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <!-- Talk formats -->
+  <section class="border-t border-ink/10">
+    <div class="mx-auto max-w-6xl px-6 py-20">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-4">
+          <div class="small-headline">/formats</div>
+        </div>
+        <div class="md:col-span-8">
+          <ul>
+            {
+              talkFormats.map((f) => (
+                <li class="border-b border-ink/10 py-6">
+                  <div class="flex items-baseline justify-between gap-6">
+                    <div class="font-display text-2xl font-bold uppercase tracking-tight md:text-3xl">
+                      {f.kind}
+                    </div>
+                    <div class="font-mono text-xs uppercase text-faint whitespace-nowrap">
+                      {f.length}
+                    </div>
+                  </div>
+                  <p class="mt-2 max-w-2xl text-base text-muted md:text-lg">
+                    {f.note}
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist / timeline -->
+  <section class="border-t border-ink/10">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="small-headline">/checklist</div>
+      </div>
+      <ol class="md:col-span-8">
+        {
+          checklist.map((c) => (
+            <li class="flex flex-col gap-1 border-b border-ink/10 py-5 md:flex-row md:items-baseline md:justify-between md:gap-6">
+              <span class="font-mono text-xs uppercase text-accent md:w-32 md:flex-none">
+                {c.when}
+              </span>
+              <span class="text-lg md:text-xl">{c.what}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- Travel & arrival -->
+  <section class="border-t border-ink/10">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="small-headline">/traveling and logistics</div>
+      </div>
+      <div class="space-y-5 text-lg leading-relaxed md:col-span-8 md:text-xl">
+        <p>
+          <span class="font-semibold">Airport:</span> The Lisbon Portela airport (LIS)
+          is around 20 minutes by taxi from Belém. The venue, Centro Champalimaud,
+          is by the river.
+        </p>
+        <p>
+          <span class="font-semibold">Hotel:</span> We'll book a hotel for you for
+          the duration of the event. If you prefer to arrange your own room, or have
+          someone traveling with you let us know and we'll make sure to accommodate
+          you.
+        </p>
+        <p>
+          <span class="font-semibold">Speaker dinner:</span> There's a speaker dinner
+          the night before (Sept 22) and a time for wrap drinks on Sept 24. Everything
+          is on us, of course. Let us know if you have any dietary restrictions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-t border-ink/10">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="small-headline">/faq</div>
+      </div>
+      <div class="md:col-span-8">
+        {
+          faq.map((item) => (
+            <div class="group border-b border-ink/10 py-5">
+              <summary class="flex cursor-pointer items-baseline justify-between gap-6 text-lg md:text-xl">
+                <span>{item.q}</span>
+              </summary>
+              <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+                {item.a}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="border-t border-ink/10">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-12">
+      <div class="md:col-span-4">
+        <div class="small-headline">/contact</div>
+      </div>
+      <div class="md:col-span-8">
+        <p class="max-w-2xl text-2xl leading-snug md:text-3xl">
+          Stuck on something? Want to bounce talk ideas off us? Feel free to
+          reach out.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href="mailto:speakers@lisbonai.org?subject=Lisbon%20AI%202026%20speaker%20question"
+            class="rounded-full bg-ink px-6 py-3 text-cream hover:bg-accent transition-colors"
+          >
+            speakers@lisbonai.org &rarr;
+          </a>
+          <a
+            href="https://discord.com/invite/ExnMf8wTPU"
+            class="rounded-full border border-ink px-6 py-3 hover:border-accent hover:text-accent transition-colors"
+          >
+            Our discord
+          </a>
+        </div>
+        <p
+          class="mt-8 max-w-2xl text-base leading-relaxed text-muted md:text-lg"
         >
-            <div class="small-headline mb-4">
-                <span class="bg-slate-100 rounded-lg px-2 py-1">
-                    /lisbon-ai-2026 · speakers
-                </span>
-            </div>
-            <h1 class="big-headline">
-                WELCOME LISBONAI 2026<br />
-                SPEAKERS <span class="text-accent">{"❤️"}</span>
-            </h1>
-        </div>
-    </section>
+          Speaker comms are handled by Fred, who'll be your point of contact
+          throughout the event. If you'd rather skip the shared address and
+          reach a human directly, email <a
+            class="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+            href="mailto:fred@lisbonai.org">fred@lisbonai.org</a
+          > or DM <a
+            class="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
+            href="https://twitter.com/f">@f</a
+          > on X/Twitter. Either works!
+        </p>
+        <p class="mt-8 font-mono text-xs uppercase text-faint">
+          See you in September!
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Thank you -->
-    <section class="border-t border-ink/10">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
-            <div class="md:col-span-4">
-                <div class="small-headline">/thank-you</div>
-            </div>
-            <div
-                class="space-y-6 text-xl leading-relaxed md:col-span-8 md:text-2xl"
-            >
-                <p>
-                    We know saying yes to a conference talk costs real time and
-                    real travel, and we don't take that lightly. Thank you for
-                    trusting. We'll do our best to make sure you have a great
-                    experience.
-                </p>
-                <p>
-                    If any of the information below is unclear, ambiguous, or
-                    feels off, email <a
-                        class="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
-                        href="mailto:speakers@lisbonai.org"
-                        >speakers@lisbonai.org</a
-                    > and we'll fix it.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Past speakers -->
-    <PastSpeakers />
-
-    <!-- 2026 act break -->
-    <section class="border-t border-ink/10">
-        <div class="mx-auto max-w-6xl px-6 py-24 pb-0 md:py-32 md:pb-12">
-            <div class="small-headline mb-6">/2026-edition</div>
-            <h2 class="big-headline">EVERYTHING ABOUT 2026</h2>
-        </div>
-    </section>
-
-    <!-- Essentials -->
-    <section id="essentials" class="">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
-            <div class="md:col-span-4">
-                <div class="small-headline">/essentials</div>
-            </div>
-            <dl class="md:col-span-8">
-                {
-                    eventDetails.map((d) => (
-                        <div class="flex items-baseline justify-between border-b border-ink/10 py-5">
-                            <dt class="font-mono text-xs uppercase text-muted">
-                                {d.label}
-                            </dt>
-                            <dd class="text-right text-xl md:text-2xl">
-                                {d.value}
-                            </dd>
-                        </div>
-                    ))
-                }
-            </dl>
-        </div>
-    </section>
-
-    <!-- Talk formats -->
-    <section class="border-t border-ink/10">
-        <div class="mx-auto max-w-6xl px-6 py-20">
-            <div class="grid gap-12 md:grid-cols-12">
-                <div class="md:col-span-4">
-                    <div class="small-headline">/formats</div>
-                </div>
-                <div class="md:col-span-8">
-                    <ul>
-                        {
-                            talkFormats.map((f) => (
-                                <li class="border-b border-ink/10 py-6">
-                                    <div class="flex items-baseline justify-between gap-6">
-                                        <div class="font-display text-2xl font-bold uppercase tracking-tight md:text-3xl">
-                                            {f.kind}
-                                        </div>
-                                        <div class="font-mono text-xs uppercase text-faint whitespace-nowrap">
-                                            {f.length}
-                                        </div>
-                                    </div>
-                                    <p class="mt-2 max-w-2xl text-base text-muted md:text-lg">
-                                        {f.note}
-                                    </p>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Checklist / timeline -->
-    <section class="border-t border-ink/10">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
-            <div class="md:col-span-4">
-                <div class="small-headline">/checklist</div>
-            </div>
-            <ol class="md:col-span-8">
-                {
-                    checklist.map((c) => (
-                        <li class="flex flex-col gap-1 border-b border-ink/10 py-5 md:flex-row md:items-baseline md:justify-between md:gap-6">
-                            <span class="font-mono text-xs uppercase text-accent md:w-32 md:flex-none">
-                                {c.when}
-                            </span>
-                            <span class="text-lg md:text-xl">{c.what}</span>
-                        </li>
-                    ))
-                }
-            </ol>
-        </div>
-    </section>
-
-    <!-- Travel & arrival -->
-    <section class="border-t border-ink/10">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
-            <div class="md:col-span-4">
-                <div class="small-headline">/traveling and logistics</div>
-            </div>
-            <div
-                class="space-y-5 text-lg leading-relaxed md:col-span-8 md:text-xl"
-            >
-                <p>
-                    <span class="font-semibold">Airport:</span> The Lisbon Portela
-                    airport (LIS) is around 20 minutes by taxi from Belém. The venue,
-                    Centro Champalimaud, is by the river.
-                </p>
-                <p>
-                    <span class="font-semibold">Hotel:</span> We'll book a hotel for
-                    you for the duration of the event. If you prefer to arrange your
-                    own room, or have someone traveling with you let us know and we'll
-                    make sure to accommodate you.
-                </p>
-                <p>
-                    <span class="font-semibold">Speaker dinner:</span> There's a speaker
-                    dinner the night before (Sept 22) and a time for wrap drinks on
-                    Sept 24. Everything is on us, of course. Let us know if you have
-                    any dietary restrictions.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="border-t border-ink/10">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
-            <div class="md:col-span-4">
-                <div class="small-headline">/faq</div>
-            </div>
-            <div class="md:col-span-8">
-                {
-                    faq.map((item) => (
-                        <div class="group border-b border-ink/10 py-5">
-                            <summary class="flex cursor-pointer items-baseline justify-between gap-6 text-lg md:text-xl">
-                                <span>{item.q}</span>
-                            </summary>
-                            <p class="mt-3 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-                                {item.a}
-                            </p>
-                        </div>
-                    ))
-                }
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section id="contact" class="border-t border-ink/10">
-        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-12">
-            <div class="md:col-span-4">
-                <div class="small-headline">/contact</div>
-            </div>
-            <div class="md:col-span-8">
-                <p class="max-w-2xl text-2xl leading-snug md:text-3xl">
-                    Stuck on something? Want to bounce talk ideas off us? Feel
-                    free to reach out.
-                </p>
-                <div class="mt-8 flex flex-wrap gap-3">
-                    <a
-                        href="mailto:speakers@lisbonai.org?subject=Lisbon%20AI%202026%20speaker%20question"
-                        class="rounded-full bg-ink px-6 py-3 text-cream hover:bg-accent transition-colors"
-                    >
-                        speakers@lisbonai.org &rarr;
-                    </a>
-                    <a
-                        href="https://discord.com/invite/ExnMf8wTPU"
-                        class="rounded-full border border-ink px-6 py-3 hover:border-accent hover:text-accent transition-colors"
-                    >
-                        Our discord
-                    </a>
-                </div>
-                <p
-                    class="mt-8 max-w-2xl text-base leading-relaxed text-muted md:text-lg"
-                >
-                    Speaker comms are handled by Fred, who'll be your point of
-                    contact throughout the event. If you'd rather skip the
-                    shared address and reach a human directly, email <a
-                        class="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
-                        href="mailto:fred@lisbonai.org">fred@lisbonai.org</a
-                    > or DM <a
-                        class="underline decoration-accent decoration-2 underline-offset-4 hover:text-accent"
-                        href="https://twitter.com/f">@f</a
-                    > on X/Twitter. Either works!
-                </p>
-                <p class="mt-8 font-mono text-xs uppercase text-faint">
-                    See you in September!
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <Footer />
+  <Footer />
 </Layout>
